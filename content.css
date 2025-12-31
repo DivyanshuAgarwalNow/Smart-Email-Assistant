@@ -1,0 +1,57 @@
+.ai-reply-button {
+    /* PIXEL-PERFECT Gmail Send button [file:70] */
+    background: #0a57d1 !important;  /* Solid color - no gradient */
+    border: 1px solid rgba(255,255,255,0.2) !important;  /* Subtle white border */
+    border-radius: 18px !important;
+    box-shadow: 
+        0 1px 2px rgba(0,0,0,0.15), 
+        0 1px 0 rgba(255,255,255,0.2) inset,
+        0 0 0 1px rgba(255,255,255,0.1) inset !important;  /* Perfect glow */
+    color: #fff !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: "Google Sans", Roboto, Arial, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    height: 36px !important;
+    line-height: 34px !important;
+    margin-right: 8px !important;
+    min-width: 85px !important;
+    padding: 0 16px 0 20px !important;  /* Extra left padding for icon */
+    position: relative !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+    animation: ai-glow 2s infinite alternate !important;
+}
+
+.ai-reply-button::after {
+    font-size: 12px !important;
+    margin-left: 4px !important;
+}
+
+.ai-reply-button:hover {
+    background: #0859d9 !important;
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.2), 
+        0 1px 0 rgba(255,255,255,0.3) inset,
+        0 0 0 1px rgba(255,255,255,0.15) inset !important;
+}
+
+.ai-reply-button:active {
+    background: #0747b3 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;
+}
+
+.ai-reply-button:disabled {
+    background: #f1f3f4 !important;
+    border-color: #dadce0 !important;
+    color: #5f6368 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+@keyframes ai-glow {
+    0% { box-shadow: 0 1px 2px rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,0.2) inset, 0 0 0 1px rgba(255,255,255,0.1) inset !important; }
+    100% { box-shadow: 0 1px 3px rgba(10,87,209,0.3), 0 1px 0 rgba(255,255,255,0.3) inset, 0 0 0 1px rgba(255,255,255,0.15) inset !important; }
+}
